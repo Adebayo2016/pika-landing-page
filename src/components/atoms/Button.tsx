@@ -21,7 +21,7 @@ const Button: FC<Props> = ({
       className={cls(
         "text-lg font-semibold transition-all duration-300 hover:brightness-125",
         variant === "outlined" &&
-          "border border-primary-navlink text-primary-navlink  ",
+          "border border-pika-navlink text-pika-navlink  ",
         className
       )}
       {...props}

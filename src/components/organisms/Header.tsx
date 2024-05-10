@@ -11,7 +11,7 @@ const Header: FC = () => {
       <div className="card flex items-center justify-between shadow-nav rounded-full px-8 py-5">
         <Logo className="w-20" />
         <nav className="hidden md:flex items-center justify-end flex-1 gap-[10%]">
-          <ul className="flex items-center justify-end gap-[50%] flex-1">
+          <ul className="flex items-center justify-end gap-[5%] flex-1">
             <li>
               <NavLink href={`/#${HomeSections.HERO}`}>Home</NavLink>
             </li>

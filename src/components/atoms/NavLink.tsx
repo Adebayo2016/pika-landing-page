@@ -10,7 +10,7 @@ const NavLink: FC<Props> = ({ children, href }) => {
   return (
     <Link
       href={href}
-      className="text-base font-medium text-primary-navlink hover:brightness-125"
+      className="text-base font-medium text-pika-navlink hover:brightness-125"
     >
       {children}
     </Link>

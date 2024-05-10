@@ -17,8 +17,10 @@ const config: Config = {
         nav: " 0px 4px 4px 0px #00000026"
       },
       colors: {
-        primary: {
-          navlink: "#E96A48"
+        pika: {
+          navlink: "#E96A48",
+          footer: "#E96A4826",
+          black: "#180a0a"
         }
       }
     }
