@@ -3,7 +3,7 @@ import { FC } from "@/utils/types";
 import React, { HTMLProps } from "react";
 
 type Props = HTMLProps<HTMLButtonElement> & {
-  variant?: "outlined" | "contained" | "link";
+  variant?: "outlined" | "contained" | "link" | "card";
   type?: "submit" | "reset" | "button" | undefined;
   color?: "primary" | "navlink";
 };
@@ -19,9 +19,11 @@ const Button: FC<Props> = ({
     <button
       type={type}
       className={cls(
-        "text-lg font-semibold transition-all duration-300 hover:brightness-125",
+        "text-base sm:text-lg transition-all duration-300 hover:brightness-125",
         variant === "outlined" &&
-          "border border-pika-navlink text-pika-navlink  ",
+          "border border-pika-navlink text-pika-navlink",
+        variant === "contained" && "bg-pika-primary text-white",
+        variant === "card" && "text-black bg-white shadow-card-btn",
         className
       )}
       {...props}

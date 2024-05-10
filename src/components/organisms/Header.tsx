@@ -7,8 +7,8 @@ import Button from "../atoms/Button";
 
 const Header: FC = () => {
   return (
-    <header className="container mx-auto py-6 px-3">
-      <div className="card flex items-center justify-between shadow-nav rounded-full px-8 py-5">
+    <header className="container mx-auto py-3 sm:py-5 px-2 sm:px-8 sticky top-0 z-10 backdrop-blur-[2px]">
+      <div className="flex items-center justify-between shadow-nav rounded-full px-8 py-5 bg-pika-header">
         <Logo className="w-20" />
         <nav className="hidden md:flex items-center justify-end flex-1 gap-[10%]">
           <ul className="flex items-center justify-end gap-[5%] flex-1">
@@ -25,7 +25,10 @@ const Header: FC = () => {
               <NavLink href={`/#${HomeSections.OFFICE}`}>Our office</NavLink>
             </li>
           </ul>
-          <Button variant="outlined" className="px-5 py-2 rounded-3xl">
+          <Button
+            variant="outlined"
+            className="px-5 py-2 rounded-3xl font-semibold"
+          >
             Join us
           </Button>
         </nav>

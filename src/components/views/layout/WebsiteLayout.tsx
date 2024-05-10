@@ -7,7 +7,7 @@ const WebsiteLayout: FC = ({ children }) => {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      {children}
       <Footer />
     </>
   );
