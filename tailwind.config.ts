@@ -16,7 +16,8 @@ const config: Config = {
       },
       boxShadow: {
         nav: " 0px 4px 4px 0px #00000026",
-        "card-btn": "0px 3px 6px 0px #0000001A"
+        "card-btn": "0px 3px 6px 0px #0000001A",
+        card: "0px 5px 11px 0px #0000001A"
       },
       colors: {
         pika: {

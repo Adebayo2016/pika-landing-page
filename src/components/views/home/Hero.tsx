@@ -7,7 +7,7 @@ import heroSm from "../../../assets/images/hero-sm.svg";
 
 const Hero: FC = () => {
   return (
-    <section className="container mx-auto px-4 sm:px-20 py-5 relative h-[calc(100vh_-_150px)] max-h-[800px] flex flex-col gap-32">
+    <section className="container mx-auto px-4 sm:px-20 py-5 relative sm:h-[calc(100vh_-_150px)] sm:max-h-[800px] flex flex-col gap-24 sm:gap-32">
       <div>
         <div className="flex flex-col items-start gap-4 sm:pt-10">
           <h2 className=" text-5xl sm:text-7xl font-semibold sm:font-bold sm:max-w-[650px] bg-hero-text bg-clip-text text-transparent tracking-wide sm:tracking-wider leading-20">
