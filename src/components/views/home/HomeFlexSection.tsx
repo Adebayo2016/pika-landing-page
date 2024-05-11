@@ -28,7 +28,7 @@ const HomeFlexSection: FC<Props> = ({
       </h4>
       <div
         className={cls(
-          "flex justify-center items-center gap-y-0 gap-10 flex-col",
+          "flex justify-center items-center gap-y-0 gap-10 flex-col p-3",
           imageIsRight ? "sm:flex-row-reverse" : "sm:flex-row"
         )}
       >

@@ -6,6 +6,7 @@ import UpfrontPrice from "./UpfrontPrice";
 import EarnAsRider from "./EarnAsRider";
 import HowPikaWorks from "./HowPikaWorks";
 import Features from "./Features";
+import TryPika from "./TryPika";
 
 const Home: FC = () => {
   return (
@@ -16,6 +17,7 @@ const Home: FC = () => {
       <UpfrontPrice />
       <Features />
       <EarnAsRider />
+      <TryPika />
     </main>
   );
 };
