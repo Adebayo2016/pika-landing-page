@@ -15,7 +15,7 @@ const FeatureCard: FC<Props> = ({ title, content, colorClasses, iconName }) => {
   return (
     <div
       className={cls(
-        "shadow-card rounded-[10px] px-10 py-5 flex  items-center gap-6 max-w-[480px] w-full",
+        "shadow-card rounded-[10px] px-10 py-5 flex  items-center gap-6 max-w-[480px] w-full h-full",
         colorClasses
       )}
     >
