@@ -39,8 +39,8 @@ const DeliverWithPika: FC = () => {
           </h2>
           <span className="text-sm sm:text-base sm:max-w-[400px]">
             Our fleet is on standby, ready to make deliveries immediately.
-            Whether it's a van, car, or motorcycle you need, Pika's got you
-            covered.
+            Whether it&apos;s a van, car, or motorcycle you need, Pika&apos;s
+            got you covered.
           </span>
           <div className="flex items-center flex-wrap justify-center gap-5 mt-6 sm:mt-10">
             <Button
