@@ -41,16 +41,16 @@ const Hero: FC = () => {
             </Link>
           </motion.div>
         </div>
-        <div className="hidden sm:block absolute right-0 -top-16 h-full w-3/5 -z-[1]">
+        <div className="hidden md:block absolute right-0 -top-16 h-full w-3/5 -z-[1]">
           <Image
             src={hero}
             height={150}
             width={150}
             alt="hero illustration"
-            className=" sm:w-full"
+            className=" md:w-full"
           />
         </div>
-        <div className="block sm:hidden absolute right-0 top-0 h-full w-3/5 -z-[1]">
+        <div className="block md:hidden absolute right-0 top-0 h-full w-3/5 -z-[1]">
           <Image
             src={heroSm}
             height={150}
