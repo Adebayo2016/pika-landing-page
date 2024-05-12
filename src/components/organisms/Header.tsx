@@ -23,7 +23,7 @@ const Header: FC = () => {
         <Logo className="w-20 relative z-[1]" />
         <nav
           className={cls(
-            "fixed left-0 w-full h-screen top-0 bg-pika-header flex flex-col items-center justify-center gap-20 transition-all duration-300",
+            "fixed w-full h-screen top-0 bg-pika-header flex flex-col items-center justify-center gap-20 transition-all duration-300",
             "md:static md:w-[unset] md:h-[unset] md:bg-[unset] md:flex-row md:justify-end md:gap-[10%] md:flex-1",
             menuIsOpen ? "left-0" : "-left-full"
           )}
