@@ -7,6 +7,7 @@ import EarnAsRider from "./EarnAsRider";
 import HowPikaWorks from "./HowPikaWorks";
 import Features from "./Features";
 import TryPika from "./TryPika";
+import DeliverWithPika from "./DeliverWithPika";
 
 const Home: FC = () => {
   return (
@@ -18,6 +19,7 @@ const Home: FC = () => {
       <Features />
       <EarnAsRider />
       <TryPika />
+      <DeliverWithPika />
     </main>
   );
 };
