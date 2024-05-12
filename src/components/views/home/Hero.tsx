@@ -4,6 +4,8 @@ import Image from "next/image";
 import React from "react";
 import hero from "../../../assets/images/hero.svg";
 import heroSm from "../../../assets/images/hero-sm.svg";
+import Link from "next/link";
+import { HomeSections } from "@/utils/enums";
 
 const Hero: FC = () => {
   return (
@@ -16,9 +18,11 @@ const Hero: FC = () => {
           <span className="text-sm sm:text-2xl max-w-[280px] sm:max-w-[400px]">
             Making every delivery experience enjoyable, fast and simple.
           </span>
-          <Button className="mt-8 sm:mt-20 py-3 px-6 rounded-2xl">
-            Explore Pika
-          </Button>
+          <Link href={`/#${HomeSections.TRY_PIKA}`}>
+            <Button className="mt-8 sm:mt-20 py-3 px-6 rounded-2xl">
+              Explore Pika
+            </Button>
+          </Link>
         </div>
         <div className="hidden sm:block absolute right-0 -top-16 h-full w-3/5 -z-[1]">
           <Image
@@ -40,12 +44,16 @@ const Hero: FC = () => {
         </div>
       </div>
       <div className="flex items-center justify-center gap-5">
-        <Button className="py-3 px-4 sm:px-6 rounded-xl" variant="card">
-          I am a Business
-        </Button>
-        <Button className="py-3 px-4 sm:px-6 rounded-xl" variant="card">
-          I am a Logistic Service
-        </Button>
+        <Link href={`/#${HomeSections.TRY_PIKA}`}>
+          <Button className="py-3 px-4 sm:px-6 rounded-xl" variant="card">
+            I am a Business
+          </Button>
+        </Link>
+        <Link href={`/#${HomeSections.TRY_PIKA}`}>
+          <Button className="py-3 px-4 sm:px-6 rounded-xl" variant="card">
+            I am a Logistic Service
+          </Button>
+        </Link>
       </div>
     </section>
   );

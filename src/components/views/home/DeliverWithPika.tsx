@@ -5,6 +5,8 @@ import drone from "../../../assets/images/drone.svg";
 import safeDelivery from "../../../assets/images/safe-delivery.svg";
 import doorDelivery from "../../../assets/images/door-delivery.svg";
 import Button from "@/components/atoms/Button";
+import Link from "next/link";
+import { HomeSections } from "@/utils/enums";
 
 const DeliverWithPika: FC = () => {
   return (
@@ -43,18 +45,22 @@ const DeliverWithPika: FC = () => {
             got you covered.
           </span>
           <div className="flex items-center flex-wrap justify-center gap-5 mt-6 sm:mt-10">
-            <Button
-              className="py-3 px-4 sm:px-6 rounded-xl whitespace-nowrap"
-              variant="card"
-            >
-              Join Pika as Rider
-            </Button>
-            <Button
-              className="py-3 px-4 sm:px-6 rounded-xl whitespace-nowrap"
-              variant="card"
-            >
-              Join as Business
-            </Button>
+            <Link href={`/#${HomeSections.TRY_PIKA}`}>
+              <Button
+                className="py-3 px-4 sm:px-6 rounded-xl whitespace-nowrap"
+                variant="card"
+              >
+                Join Pika as Rider
+              </Button>
+            </Link>
+            <Link href={`/#${HomeSections.TRY_PIKA}`}>
+              <Button
+                className="py-3 px-4 sm:px-6 rounded-xl whitespace-nowrap"
+                variant="card"
+              >
+                Join as Business
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

@@ -1,7 +1,9 @@
+import { HomeSections } from "@/utils/enums";
 import { cls } from "@/utils/helpers";
 import { FC } from "@/utils/types";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
+import Link from "next/link";
 import React, { ReactNode } from "react";
 
 type Props = {
@@ -48,7 +50,9 @@ const HomeFlexSection: FC<Props> = ({
           <span className="text-sm sm:text-base sm:max-w-[400px]">
             {content}
           </span>
-          <div className="sm:mt-10">{action}</div>
+          <Link href={`/#${HomeSections.TRY_PIKA}`} className="sm:mt-10">
+            {action}
+          </Link>
         </div>
       </div>
     </section>

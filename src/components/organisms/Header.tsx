@@ -4,6 +4,7 @@ import Logo from "../atoms/Logo";
 import NavLink from "../atoms/NavLink";
 import { HomeSections } from "@/utils/enums";
 import Button from "../atoms/Button";
+import Link from "next/link";
 
 const Header: FC = () => {
   return (
@@ -25,12 +26,14 @@ const Header: FC = () => {
               <NavLink href={`/#${HomeSections.OFFICE}`}>Our office</NavLink>
             </li>
           </ul>
-          <Button
-            variant="outlined"
-            className="px-5 py-2 rounded-3xl font-semibold"
-          >
-            Join us
-          </Button>
+          <Link href={`//#${HomeSections.TRY_PIKA}`}>
+            <Button
+              variant="outlined"
+              className="px-5 py-2 rounded-3xl font-semibold"
+            >
+              Join us
+            </Button>
+          </Link>
         </nav>
       </div>
     </header>

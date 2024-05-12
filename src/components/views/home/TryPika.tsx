@@ -1,9 +1,13 @@
+import { HomeSections } from "@/utils/enums";
 import { FC } from "@/utils/types";
 import React from "react";
 
 const TryPika: FC = () => {
   return (
-    <section className="container mx-auto px-4 text-center pb-10">
+    <section
+      className="container mx-auto px-4 text-center pb-10"
+      id={HomeSections.TRY_PIKA}
+    >
       <h4 className="text-xl sm:text-4xl text-center font-medium mb-2 sm:mb-4">
         Are You Ready To Try Pika?
       </h4>
