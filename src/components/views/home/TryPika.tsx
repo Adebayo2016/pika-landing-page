@@ -3,6 +3,7 @@ import { HomeSections } from "@/utils/enums";
 import { FC } from "@/utils/types";
 import React from "react";
 import { motion } from "framer-motion";
+import WaitlistForm from "./WaitlistForm";
 
 const TryPika: FC = () => {
   return (
@@ -29,20 +30,15 @@ const TryPika: FC = () => {
       >
         Jump on the Pika waitlist today and be the first to know when we launch!
       </motion.span>
-      <motion.form
+      <motion.div
         initial={{ opacity: 0, y: -10 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.4, delay: 0.3 }}
-        className="mt-12 rounded-[10px] border border-pika-black w-fit mx-auto overflow-hidden flex"
+        className="py-12 relative"
+        
       >
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter your email address"
-          className="py-3 px-4 text-pika-black placeholder:text-pika-black outline-none min-w-[250px] text-sm"
-        />
-        <button className="bg-pika-black text-white py-3 px-8">Submit</button>
-      </motion.form>
+        <WaitlistForm />
+      </motion.div>
     </section>
   );
 };
