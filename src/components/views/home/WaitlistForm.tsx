@@ -15,7 +15,7 @@ const WaitlistForm: FC = () => {
       formRef.current?.reset();
       setResponseMsg("Successfully added to the waitlist.");
     } else {
-      setResponseMsg(response.err.message);
+      setResponseMsg(response?.err?.message);
     }
 
     setTimeout(() => setResponseMsg(""), 2000);
