@@ -5,13 +5,13 @@ import Image from "next/image";
 import React from "react";
 import hero from "../../../assets/images/hero.svg";
 import heroSm from "../../../assets/images/hero-sm.svg";
-import Link from "next/link";
-import { HomeSections } from "@/utils/enums";
 import { motion } from "framer-motion";
+import { useModalContext } from "@/context/modal";
 
 const Hero: FC = () => {
+  const { open } = useModalContext();
   return (
-    <section className="container mx-auto px-4 sm:px-20 py-5 relative sm:h-[calc(100vh_-_150px)] sm:max-h-[800px] flex flex-col gap-24 sm:gap-32">
+    <section className="container mx-auto px-4 sm:px-20 py-5 relative sm:min-h-[calc(100vh_-_150px)] sm:max-h-[800px] flex flex-col gap-24 sm:gap-32">
       <div>
         <div className="flex flex-col items-start gap-4 sm:pt-10">
           <motion.h2
@@ -36,9 +36,9 @@ const Hero: FC = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-8 sm:mt-20"
           >
-            <Link href={`/#${HomeSections.TRY_PIKA}`}>
-              <Button className="py-3 px-6 rounded-2xl">Explore Pika</Button>
-            </Link>
+            <Button className="py-3 px-6 rounded-2xl" onClick={open}>
+              Explore Pika
+            </Button>
           </motion.div>
         </div>
         <div className="hidden md:block absolute right-0 -top-16 h-full w-3/5 -z-[1]">
@@ -66,22 +66,26 @@ const Hero: FC = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
         >
-          <Link href={`/#${HomeSections.TRY_PIKA}`}>
-            <Button className="py-3 px-4 sm:px-6 rounded-xl" variant="card">
-              I am a Business
-            </Button>
-          </Link>
+          <Button
+            className="py-3 px-4 sm:px-6 rounded-xl"
+            variant="card"
+            onClick={open}
+          >
+            I am a Business
+          </Button>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.9, delay: 0.2 }}
         >
-          <Link href={`/#${HomeSections.TRY_PIKA}`}>
-            <Button className="py-3 px-4 sm:px-6 rounded-xl" variant="card">
-              I am a Logistic Service
-            </Button>
-          </Link>
+          <Button
+            className="py-3 px-4 sm:px-6 rounded-xl"
+            variant="card"
+            onClick={open}
+          >
+            I am a Logistic Service
+          </Button>
         </motion.div>
       </div>
     </section>

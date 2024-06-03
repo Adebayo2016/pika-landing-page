@@ -16,12 +16,15 @@ export function cls(
 
 export const addToWaitlist = async (state: any, formData: FormData) => {
   try {
-    const email = formData.get("email");
-    if (!email) throw new Error("Email is required");
-    const res = await fetch(`${WAITLIST_ENDPOINT_URL}?email=${email}`, {
-      method: "POST",
-      body: JSON.stringify({})
-    });
+    const { name, email, state, city, business_name } =
+      Object.fromEntries(formData);
+    const res = await fetch(
+      `${WAITLIST_ENDPOINT_URL}?name=${name}&email=${email}&state=${state}&city=${city}&business=${business_name}`,
+      {
+        method: "POST",
+        body: JSON.stringify({})
+      }
+    );
     const data = await res.json();
     formData.set("email", "");
     return data;

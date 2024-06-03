@@ -1,12 +1,12 @@
 "use client";
-import { HomeSections } from "@/utils/enums";
 import { cls } from "@/utils/helpers";
 import { FC } from "@/utils/types";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Image from "next/image";
-import Link from "next/link";
 import React, { ReactNode } from "react";
 import { motion } from "framer-motion";
+import Button from "@/components/atoms/Button";
+import { useModalContext } from "@/context/modal";
 
 type Props = {
   title: string;
@@ -25,6 +25,7 @@ const HomeFlexSection: FC<Props> = ({
   content,
   action
 }) => {
+  const { open } = useModalContext();
   return (
     <section className="container mx-auto px-4 sm:px-20 py-20 sm:py-28 text-pika-black">
       <motion.h4
@@ -85,7 +86,9 @@ const HomeFlexSection: FC<Props> = ({
             transition={{ duration: 0.4, delay: 0.3 }}
             className="sm:mt-10"
           >
-            <Link href={`/#${HomeSections.TRY_PIKA}`}>{action}</Link>
+            <Button className="py-3 px-6 rounded-2xl" onClick={open}>
+              {action}
+            </Button>
           </motion.div>
         </div>
       </div>

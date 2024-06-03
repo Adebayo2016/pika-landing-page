@@ -6,11 +6,11 @@ import drone from "../../../assets/images/drone.svg";
 import safeDelivery from "../../../assets/images/safe-delivery.svg";
 import doorDelivery from "../../../assets/images/door-delivery.svg";
 import Button from "@/components/atoms/Button";
-import Link from "next/link";
-import { HomeSections } from "@/utils/enums";
 import { motion } from "framer-motion";
+import { useModalContext } from "@/context/modal";
 
 const DeliverWithPika: FC = () => {
+  const { open } = useModalContext();
   return (
     <section className="container mx-auto px-6 py-10">
       <div className="shadow-card rounded-3xl sm:p-6 sm:m-8">
@@ -65,28 +65,26 @@ const DeliverWithPika: FC = () => {
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.3 }}
             >
-              <Link href={`/#${HomeSections.TRY_PIKA}`}>
-                <Button
-                  className="py-3 px-4 sm:px-6 rounded-xl whitespace-nowrap"
-                  variant="card"
-                >
-                  Join Pika as Rider
-                </Button>
-              </Link>
+              <Button
+                className="py-3 px-4 sm:px-6 rounded-xl whitespace-nowrap"
+                variant="card"
+                onClick={open}
+              >
+                Join Pika as Rider
+              </Button>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, scale: 0.7 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: 0.5 }}
             >
-              <Link href={`/#${HomeSections.TRY_PIKA}`}>
-                <Button
-                  className="py-3 px-4 sm:px-6 rounded-xl whitespace-nowrap"
-                  variant="card"
-                >
-                  Join as Business
-                </Button>
-              </Link>
+              <Button
+                className="py-3 px-4 sm:px-6 rounded-xl whitespace-nowrap"
+                variant="card"
+                onClick={open}
+              >
+                Join as Business
+              </Button>
             </motion.div>
           </div>
         </div>

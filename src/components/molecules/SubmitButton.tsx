@@ -1,13 +1,25 @@
 import { FC } from "@/utils/types";
-import React from "react";
 import { useFormStatus } from "react-dom";
+import React, { HTMLProps, ReactNode } from "react";
+import Button from "../atoms/Button";
 
-const SubmitButton: FC = ({ className, children }) => {
+type Props = Omit<HTMLProps<HTMLButtonElement>, "type" | "size" | "color"> & {
+  icon?: ReactNode;
+  padding?: string;
+};
+
+const SubmitButton: FC<Props> = ({ disabled, children, ...props }) => {
   const { pending } = useFormStatus();
+
   return (
-    <button className={className} type="submit" disabled={pending}>
-      {!pending ? children : "Loading..."}
-    </button>
+    <Button
+      disabled={disabled || pending}
+      variant="contained"
+      type="submit"
+      {...props}
+    >
+      {pending ? "loading..." : children}
+    </Button>
   );
 };
 
