@@ -5,12 +5,13 @@ import Logo from "../atoms/Logo";
 import NavLink from "../atoms/NavLink";
 import { HomeSections } from "@/utils/enums";
 import Button from "../atoms/Button";
-import Link from "next/link";
 import Icon from "../atoms/Icon";
 import { cls } from "@/utils/helpers";
 import { motion, AnimatePresence } from "framer-motion";
+import { useModalContext } from "@/context/modal";
 
 const Header: FC = () => {
+  const { open } = useModalContext();
   const [menuIsOpen, setMenuIsOpen] = useState(false);
 
   //   functions
@@ -67,15 +68,16 @@ const Header: FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4, duration: 0.3 }}
           >
-            <Link href={`//#${HomeSections.TRY_PIKA}`}>
-              <Button
-                variant="outlined"
-                className="px-5 py-2 rounded-3xl font-semibold"
-                onClick={closeMenu}
-              >
-                Join us
-              </Button>
-            </Link>
+            <Button
+              variant="outlined"
+              className="px-5 py-2 rounded-3xl font-semibold"
+              onClick={() => {
+                open();
+                closeMenu();
+              }}
+            >
+              Join us
+            </Button>
           </motion.div>
         </nav>
         <AnimatePresence>

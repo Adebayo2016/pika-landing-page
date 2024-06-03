@@ -4,7 +4,7 @@ import React, { HTMLProps } from "react";
 
 type Props = HTMLProps<HTMLButtonElement> & {
   variant?: "outlined" | "contained" | "link" | "card";
-  type?: "submit" | "reset" | "button" | undefined;
+  type?: "submit" | "reset" | "button";
   color?: "primary" | "navlink";
 };
 
@@ -19,7 +19,7 @@ const Button: FC<Props> = ({
     <button
       type={type}
       className={cls(
-        "text-base sm:text-lg transition-all duration-300 hover:brightness-125",
+        "text-base sm:text-lg transition-all duration-300 hover:brightness-125 disabled:bg-gray-200 disabled:text-pika-black",
         variant === "outlined" &&
           "border border-pika-navlink text-pika-navlink",
         variant === "contained" && "bg-pika-primary text-white",

@@ -1,3 +1,4 @@
+"use client";
 import { FC } from "@/utils/types";
 import React from "react";
 import Hero from "./Hero";
@@ -6,8 +7,8 @@ import UpfrontPrice from "./UpfrontPrice";
 import EarnAsRider from "./EarnAsRider";
 import HowPikaWorks from "./HowPikaWorks";
 import Features from "./Features";
-import TryPika from "./TryPika";
 import DeliverWithPika from "./DeliverWithPika";
+import WaitlistModal from "./WaitlistModal";
 
 const Home: FC = () => {
   return (
@@ -18,8 +19,8 @@ const Home: FC = () => {
       <UpfrontPrice />
       <Features />
       <EarnAsRider />
-      <TryPika />
       <DeliverWithPika />
+      <WaitlistModal />
     </main>
   );
 };

@@ -1,10 +1,13 @@
+import { nextui } from "@nextui-org/theme";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}"
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    // nextui components
+    "./node_modules/@nextui-org/theme/dist/components/modal.js"
   ],
   theme: {
     extend: {
@@ -30,6 +33,18 @@ const config: Config = {
       }
     }
   },
-  plugins: []
+  plugins: [
+    nextui({
+      themes: {
+        light: {
+          colors: {
+            primary: {
+              DEFAULT: "#FF592D"
+            }
+          }
+        }
+      }
+    })
+  ]
 };
 export default config;

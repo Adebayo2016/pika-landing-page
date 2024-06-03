@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/global.css";
 import WebsiteLayout from "@/components/views/layout/WebsiteLayout";
+import Provider from "./provider";
+import { Flip, ToastContainer } from "react-toastify";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,7 +20,22 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <WebsiteLayout>{children}</WebsiteLayout>
+        <Provider>
+          <WebsiteLayout>{children}</WebsiteLayout>
+          <ToastContainer
+            position="bottom-left"
+            autoClose={3000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+            theme="light"
+            transition={Flip}
+          />
+        </Provider>
       </body>
     </html>
   );
