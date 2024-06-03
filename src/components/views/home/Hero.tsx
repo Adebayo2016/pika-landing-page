@@ -11,7 +11,7 @@ import { useModalContext } from "@/context/modal";
 const Hero: FC = () => {
   const { open } = useModalContext();
   return (
-    <section className="container mx-auto px-4 sm:px-20 py-5 relative sm:h-[calc(100vh_-_150px)] sm:max-h-[800px] flex flex-col gap-24 sm:gap-32">
+    <section className="container mx-auto px-4 sm:px-20 py-5 relative sm:min-h-[calc(100vh_-_150px)] sm:max-h-[800px] flex flex-col gap-24 sm:gap-32">
       <div>
         <div className="flex flex-col items-start gap-4 sm:pt-10">
           <motion.h2
