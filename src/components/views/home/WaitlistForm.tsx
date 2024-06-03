@@ -5,7 +5,7 @@ import SubmitButton from "@/components/molecules/SubmitButton";
 import { useModalContext } from "@/context/modal";
 import { addToWaitlist } from "@/utils/helpers";
 import { FC } from "@/utils/types";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { useFormState } from "react-dom";
 import { toast } from "react-toastify";
 
@@ -13,15 +13,6 @@ const WaitlistForm: FC = () => {
   const { close } = useModalContext();
   const formRef = useRef<HTMLFormElement>(null);
   const [response, action] = useFormState(addToWaitlist, undefined);
-  const [isOpen, setIsOpen] = useState(false); // Add a state to control the modal
-
-  const openModal = () => {
-    setIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsOpen(false);
-  };
 
   useEffect(() => {
     if (response && response.success) {
