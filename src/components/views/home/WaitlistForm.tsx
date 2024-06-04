@@ -72,7 +72,7 @@ const WaitlistForm: FC = () => {
           Cancel
         </Button>
         <SubmitButton className="py-2 px-4 rounded-sm !text-base sm:!text-base">
-          Create
+          Submit
         </SubmitButton>
       </footer>
     </form>
