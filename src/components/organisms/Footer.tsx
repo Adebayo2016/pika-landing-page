@@ -80,6 +80,12 @@ const Footer: FC = () => {
                       +2348127544013
                     </Link>
                   </li>
+                  <li>
+                    <Link href="#" className="whitespace-nowrap">
+                    +2347067455268
+                    </Link>
+                  </li>
+                  
                 </ul>
               </nav>
             </div>
