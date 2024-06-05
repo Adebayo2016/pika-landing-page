@@ -72,12 +72,12 @@ const Footer: FC = () => {
                 <ul>
                   <li>
                     <Link href="#" className="whitespace-nowrap">
-                      info@abc.com
+                      deaelum@gmail.com
                     </Link>
                   </li>
                   <li>
                     <Link href="#" className="whitespace-nowrap">
-                      +91 988778889
+                      +2348127544013
                     </Link>
                   </li>
                 </ul>
@@ -93,12 +93,12 @@ const Footer: FC = () => {
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="whitespace-nowrap">
+                    <Link href="https://www.instagram.com/pika_deliveries/" className="whitespace-nowrap">
                       Instagram
                     </Link>
                   </li>
                   <li>
-                    <Link href="#" className="whitespace-nowrap">
+                    <Link href="https://x.com/pika_logistics" className="whitespace-nowrap">
                       Twitter
                     </Link>
                   </li>
