@@ -37,7 +37,7 @@ const Hero: FC = () => {
             className="mt-8 sm:mt-20"
           >
             <Button className="py-3 px-6 rounded-2xl" onClick={open}>
-              Explore Pika
+              Join Waitlist
             </Button>
           </motion.div>
         </div>
