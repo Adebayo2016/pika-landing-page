@@ -9,6 +9,13 @@ import React, { useEffect, useRef } from "react";
 import { useFormState } from "react-dom";
 import { toast } from "react-toastify";
 
+const NIGERIAN_STATES = [
+  'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra', 'Bauchi', 'Bayelsa', 'Benue', 'Borno', 'Cross River', 'Delta',
+  'Ebonyi', 'Edo', 'Ekiti', 'Enugu', 'Federal Capital Territory', 'Gombe', 'Imo', 'Jigawa', 'Kaduna', 'Kano',
+  'Katsina', 'Kebbi', 'Kogi', 'Kwara', 'Lagos', 'Nasarawa', 'Niger', 'Ogun', 'Ondo', 'Osun',
+  'Oyo', 'Plateau', 'Rivers', 'Sokoto', 'Taraba', 'Yobe', 'Zamfara'
+];
+
 const WaitlistForm: FC = () => {
   const { close } = useModalContext();
   const formRef = useRef<HTMLFormElement>(null);
@@ -41,18 +48,31 @@ const WaitlistForm: FC = () => {
           name="email"
           type="email"
           label="Email"
+          helperText="We'll never share your email with anyone else."
           required
           className="placeholder:text-sm placeholder:font-normal placeholder:text-gray-300"
         />
+        <div className="flex flex-col">
+          <label htmlFor="state" className="mb-1 text-sm font-medium text-gray-700">
+            State
+          </label>
+          <select
+            name="state"
+            id="state"
+            required
+            className="w-full px-3 py-2 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+          >
+            <option value="">state of business operation</option>
+            {NIGERIAN_STATES.map((state) => (
+              <option key={state} value={state}>
+                {state}
+              </option>
+            ))}
+          </select>
+        </div>
         <Input
-          name="state"
-          label="State"
-          required
-          className="placeholder:text-sm placeholder:font-normal placeholder:text-gray-300"
-        />
-        <Input
-          name="city"
-          label="City"
+          name="phone" 
+          label="phone number"
           required
           className="placeholder:text-sm placeholder:font-normal placeholder:text-gray-300"
         />

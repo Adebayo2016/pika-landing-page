@@ -16,10 +16,10 @@ export function cls(
 
 export const addToWaitlist = async (state: any, formData: FormData) => {
   try {
-    const { name, email, state, city, business_name } =
+    const { name, email, state, phone, business_name } =
       Object.fromEntries(formData);
     const res = await fetch(
-      `${WAITLIST_ENDPOINT_URL}?name=${name}&email=${email}&state=${state}&city=${city}&business=${business_name}`,
+      `${WAITLIST_ENDPOINT_URL}?name=${name}&email=${email}&state=${state}&phone=${phone}&business=${business_name}`,
       {
         method: "POST",
         body: JSON.stringify({})
