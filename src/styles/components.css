@@ -1,8 +1,0 @@
-@tailwind components;
-
-@layer components {
-  .container {
-    width: 100% !important;
-    max-width: 1536px !important;
-  }
-}
