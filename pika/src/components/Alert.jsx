@@ -5,6 +5,7 @@ const Alert = ({message, type="success"}) => {
   let iconClass = "";
 
   if(type == "success"){
+
     iconClass = "text-green-500";
   }
 
