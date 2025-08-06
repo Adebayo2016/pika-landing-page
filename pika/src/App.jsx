@@ -5,7 +5,6 @@ import Login from './pages/Login';
 import Join from "./pages/Join";
 import NoPage from "./pages/NoPage";
 import Logout from "./pages/Logout";
-import VerifyOTP from "./pages/VerifyOtp";
 import VerifyOTPSuccess from "./pages/VerifyOTPSuccess";
 import SignUpSuccess from "./pages/SignUpSuccess";
 import Subscription from "./pages/Subscription";
@@ -15,6 +14,7 @@ import Dashboard from "./pages/Dashboard";
 import Wallet from "./pages/Wallet";
 import Inventory from "./pages/Inventory";
 import Navbar from "./pages/Navbar";
+import VerifyOTP from "./pages/VerifyOtp";
 
 import {
   QueryClient,
