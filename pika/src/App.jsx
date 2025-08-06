@@ -15,6 +15,7 @@ import Dashboard from "./pages/Dashboard";
 import Wallet from "./pages/Wallet";
 import Inventory from "./pages/Inventory";
 import Navbar from "./pages/Navbar";
+
 import {
   QueryClient,
   QueryClientProvider
